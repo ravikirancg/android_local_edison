@@ -1,43 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
-  <remote  name="gh"
+  <remote name="gh"
            fetch="git://github.com/" />
 
-  <remote  name="omapzoom"
-           fetch="git://git.omapzoom.org/" />
+           
+  <!-- PAC removals -->
+  <remove-project name="android_frameworks_av" />
 
-  <!-- AOSPA removals -->
-  <remove-project name="CyanogenMod/android_frameworks_av" />
-  <remove-project name="platform/hardware/ti/omap4xxx" />
-  <remove-project name="platform/hardware/ti/wlan" />
-  <remove-project name="platform/hardware/ti/wpan" />
-
-  <!-- AOSPA replacements -->
+  <!-- PAC replacements -->
   <project path="frameworks/av" name="STS-Dev-Team/android_frameworks_av" remote="gh" revision="cm-10.1" />
+
   
   <!-- Local devices -->
-  <project path="device/motorola/edison" name="alteredlikeness/android_device_motorola_edison" remote="gh" revision="jellybean" />
+  <project path="device/motorola/edison" name="ravikirancg/android_device_motorola_edison" remote="gh" revision="jellybean" />
   <project path="device/motorola/omap4-common" name="STS-Dev-Team/android_device_motorola_common" remote="gh" revision="jb-mr1" />
  
   <!-- Local vendor -->
   <project path="vendor/motorola/omap4-common" name="STS-Dev-Team/android_vendor_motorola_common" remote="gh" revision="jb-mr1" />
-  <project path="vendor/motorola/edison" name="alteredlikeness/android_vendor_motorola_edison" remote="gh" revision="master" />
-  
-  <!-- TI addons/replacements (CM tracks TI now also)-->
-  <project path="device/ti/common-open" name="device/ti/common-open" remote="omapzoom" revision="p-jb-mr1-release" />
-  <project path="device/ti/proprietary-open" name="device/ti/proprietary-open" remote="omapzoom" revision="p-jb-mr1-release" />
-  <project path="external/wpa_supplicant_8_ti" name="platform/external/wpa_supplicant_8_ti" remote="omapzoom" revision="p-jb-mr1-release" />
-  <project path="hardware/ti/omap4xxx" name="CyanogenMod/android_hardware_ti_omap4xxx" remote="gh" revision="cm-10.1" />
-  <project path="hardware/ti/wlan" name="CyanogenMod/android_hardware_ti_wlan" remote="gh" revision="cm-10.1" />
-  <project path="hardware/ti/wpan" name="CyanogenMod/android_hardware_ti_wpan" remote="gh" revision="cm-10.1" />
-
-  <!-- CM addons -->
-  <project path="packages/apps/CMFileManager" name="CyanogenMod/android_packages_apps_CMFileManager" remote="gh" revision="cm-10.1" />
-  <project path="packages/apps/Apollo" name="CyanogenMod/android_packages_apps_Apollo" remote="gh" revision="cm-10.1" />
-  <project path="packages/apps/DSPManager" name="CyanogenMod/android_packages_apps_DSPManager" remote="gh" revision="cm-10.1" />
+  <project path="vendor/motorola/edison" name="ravikirancg/android_vendor_motorola_edison" remote="gh" revision="master" />
 
   <!-- Custom recovery addons -->
-  <project path="external/bootmenu" name="alteredlikeness/android_external_bootmenu" remote="gh" revision="jellybean" />
+  <project path="external/bootmenu" name="ravikirancg/android_external_bootmenu" remote="gh" revision="jellybean" />
 
 </manifest>
